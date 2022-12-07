@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>PEPSI</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Newsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's What<br><span>I like</span></h2>
+                <p>In 1903, Bradham moved the bottling of Pepsi from his drugstore to a rented warehouse. That year, Bradham sold 7,968 gallons of syrup. The next year, Pepsi was sold in six-ounce bottles, and sales increased to 19,848 gallons. In 1909, automobile race pioneer Barney Oldfield was the first celebrity to endorse Pepsi, describing it as "A bully drink...refreshing, invigorating, a fine bracer before a race." The advertising theme "Delicious and Healthful" was then used over the next two decades</p>
+                <a href="#">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/pepsi001.png" class="pepsi">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/pepsi001.png" onclick="imgSlaider('img/pepsi001.png'); changeBgColor('#0062be')"></li>
+            <li><img src="img/pepsi002.png" onclick="imgSlaider('img/pepsi002.png'); changeBgColor('#e60c2c')"></li>
+            <li><img src="img/pepsi003.png" onclick="imgSlaider('img/pepsi003.png'); changeBgColor('#1e1e1e')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlaider(anything){
+            document.querySelector('.pepsi').src = anything;
+        }
+        function changeBgColor(coloer){
+            const sec = document.querySelector('.sec');
+            sec.style.background = coloer;
+        }
+
+        function menuToggle() {
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
